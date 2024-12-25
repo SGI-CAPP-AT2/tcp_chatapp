@@ -1,0 +1,1 @@
+javac --class-path .. -d build ../chatapp/*.java

@@ -1,0 +1,1 @@
+java -cp build chatapp.Server %1
