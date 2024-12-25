@@ -1,0 +1,17 @@
+#!/bin/bash
+./compile
+cd build
+java -cp . chatapp.Server $1 > server.log 2>&1 &
+echo "Server running on port $1"
+
+while true; do
+  read -p "Enter input (type 'q' to quit or 'n' instantiate a client): " user_input
+  if [[ "$user_input" == "q" ]]; then
+    echo "Exiting the program."
+    break
+  elif [[ "$user_input" == "n" ]]; then
+    java -cp . chatapp.Client $1 > client.log 2>&1 &
+  else
+    echo "No input provided. Try again."
+  fi
+done
