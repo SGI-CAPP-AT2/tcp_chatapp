@@ -1,10 +1,15 @@
 # Chat Application with Tcp
-![image](https://github.com/user-attachments/assets/837fa51b-b630-4ca5-819e-4a0cd87fdd5c)
+![Preview of Application](https://github.com/user-attachments/assets/837fa51b-b630-4ca5-819e-4a0cd87fdd5c)
 
 
 This Project aims to develop a TCP based chatapp using TCP and Swing in Java
 
 > The Project is developed during Semester 5 (Winter 2023) of Diploma in Computer Engineering but build script and git initialization done on 25/12/2024
+
+## Architecture 
+
+![Architecture of Application](https://github.com/user-attachments/assets/e315f8eb-e9d9-40a1-929c-0d6201cd1bbd)
+
 
 ## Dependencies
 This project requires following dependencies in order to run project on your system.
