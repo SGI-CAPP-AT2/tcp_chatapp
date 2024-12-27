@@ -25,8 +25,7 @@ public abstract class ChatUser {
                     onMessageArrive(message);
                 }
                 in.close();
-            } catch (Exception e) {
-            }
+            } catch (Exception e) {}
         }, username + ":send");
         this.username = username;
         recieveThread.start();
@@ -35,6 +34,16 @@ public abstract class ChatUser {
     public void sendMessage(String message) throws Exception {
         System.out.println("Sending ... "+ message);
         out.writeObject(new Message(username, message, new Date()));
+    }
+
+    public void closeConnection(){
+        try {
+            in.close();
+            out.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public abstract void onMessageArrive(Message message);

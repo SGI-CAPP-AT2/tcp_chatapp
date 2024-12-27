@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.Vector;
 
 import chatapp.models.Message;
@@ -23,15 +24,16 @@ public abstract class ChatServerHandler implements Runnable {
     public void run() {
         try {
             Thread receivingThread = new Thread(() -> {
-                while (true) {
+                boolean errorInConnection = false;
+                while (!errorInConnection) {
                     Message m;
                     try {
                         if ((m = (Message) in.readObject()) != null)
                             this.onReceive(m);
                         continue;
                     } catch (Exception e) {
-                        System.out.println("Exception while Reading");
-                        e.printStackTrace();
+                        System.out.println("Exception while Reading! Stopping the thread");
+                        errorInConnection = true;
                     }
                 }
             });
@@ -52,7 +54,7 @@ public abstract class ChatServerHandler implements Runnable {
         }
     }
 
-    public abstract void onReceive(Message m);
+    public abstract void onReceive(Message m) throws SQLException;
 
     public void send(Message m) {
         mVector.add(m);

@@ -8,6 +8,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
@@ -47,8 +48,9 @@ public abstract class ClientGUI extends JFrame {
         gbc.gridwidth = 1;
         gbc.gridx = 2;
         msgSection.add(msgButton, gbc);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        
     }
-
     public void setup() {
         this.add(scpane, BorderLayout.CENTER);
         this.add(msgSection, BorderLayout.PAGE_END);

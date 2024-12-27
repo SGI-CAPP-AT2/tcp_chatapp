@@ -1,5 +1,8 @@
 package chatapp;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import javax.swing.JOptionPane;
 
 import chatapp.handlers.ChatUser;
@@ -40,6 +43,11 @@ public class Client {
             hlp.setGUI(gui);
             gui.setup();
             gui.showUp();
+            gui.addWindowListener(new WindowAdapter() {
+                public void windowClosing(WindowEvent e) {
+                    chu.closeConnection();
+                }
+            });
         }
     }
 }
