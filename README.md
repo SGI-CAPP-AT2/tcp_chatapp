@@ -7,8 +7,8 @@ This Project aims to develop a TCP based chatapp using TCP and Swing in Java
 > The Project is developed during Semester 5 (Winter 2023) of Diploma in Computer Engineering but build script and git initialization done on 25/12/2024
 
 ## Architecture 
+<p align="center"><img src="https://github.com/user-attachments/assets/a031323b-d9ae-4099-84d7-03c6ceddf557" /></p>
 
-![Architecture of Application](https://github.com/user-attachments/assets/e315f8eb-e9d9-40a1-929c-0d6201cd1bbd)
 
 
 ## Dependencies
