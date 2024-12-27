@@ -1,1 +1,1 @@
-java -cp build chatapp.Server %1
+java -cp "build;../libs/connector_mysql.jar" chatapp.Server %1 %2 %3 %4 %5

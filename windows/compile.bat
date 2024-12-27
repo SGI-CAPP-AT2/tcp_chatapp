@@ -1,1 +1,1 @@
-javac --class-path .. -d build ../chatapp/*.java
+javac --class-path "..;../libs/connector_mysql.jar" -d build ../chatapp/*.java

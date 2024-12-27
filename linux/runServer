@@ -3,5 +3,5 @@ if lsof -nP -iTCP -sTCP:LISTEN | grep :"$1" > /dev/null; then
   echo "Port $1 is occupied."
 else
   echo "$1 Running on"
-  java -cp build chatapp.Server $1
+  java -cp "build;../libs/connector_mysql.jar" chatapp.Server $1 $2 $3 $4
 fi
