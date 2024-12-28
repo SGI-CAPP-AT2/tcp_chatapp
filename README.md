@@ -31,7 +31,7 @@ this will create folder `windows/build` where all compiled classes are
 After Compilation to Run Server use following command
 
 ```shell
-./runServer 61109 # or port you want
+./runServer MYSQL_HOSTNAME_OR_IP_ADDRESS MYSQL_UNAME MYSQL_PWD 61109 # or port you want
 ```
 
 After running server successfully try instantiating a client
@@ -48,7 +48,7 @@ Instead of dealing with those multiple scripts you can use play script which is 
 
 ```shell
 cd linux
-./play 61109 # or the port you want
+./play MYSQL_HOSTNAME_OR_IP_ADDRESS MYSQL_UNAME MYSQL_PWD 61109 # or the port you want
 ```
 This will print output something like
 ```
