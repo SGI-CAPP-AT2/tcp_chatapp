@@ -9,6 +9,7 @@ This Project aims to develop a TCP based chatapp using TCP and Swing in Java
 ## Architecture 
 <p align="center"><img src="https://github.com/user-attachments/assets/a031323b-d9ae-4099-84d7-03c6ceddf557" /></p>
 
+This architecture demonstrates how each thread at server will receive message from client and will send messages to client.
 
 
 ## Dependencies
