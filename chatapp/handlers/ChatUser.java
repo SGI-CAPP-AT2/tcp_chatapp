@@ -14,8 +14,8 @@ public abstract class ChatUser {
     Socket socket;
     ObjectOutputStream out;
     ObjectInputStream in;
-    public ChatUser(String username, int port) throws UnknownHostException, IOException {
-        this.socket = new Socket("localhost", port);
+    public ChatUser(String ip, String username, int port) throws UnknownHostException, IOException {
+        this.socket = new Socket(ip, port);
         in = new ObjectInputStream(socket.getInputStream());
         out = new ObjectOutputStream(socket.getOutputStream());
         Thread recieveThread = new Thread(() -> {

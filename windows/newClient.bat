@@ -1,1 +1,1 @@
-java -cp build chatapp.Client %1
+java -cp build chatapp.Client %1 %2

@@ -21,12 +21,15 @@ public class Client {
     } 
     public static void main(String[] args) throws Exception {
         int port = 55000;
+        String ip = "localhost";
         if(args.length>0)
             port = Integer.parseInt(args[0]);
+        if(args.length>1)
+            ip = args[1];
         String uname = JOptionPane.showInputDialog("Enter your username: ");
         Helper hlp = new Helper();
         if(uname.length()>0){
-            ChatUser chu = new ChatUser(uname, port) {
+            ChatUser chu = new ChatUser(ip, uname, port) {
                 public void onMessageArrive(Message m){
                     hlp.getGUI().addMessage(m.toString());
                 }
