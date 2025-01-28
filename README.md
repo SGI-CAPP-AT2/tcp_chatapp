@@ -9,6 +9,7 @@ This Project aims to develop a TCP based chatapp using TCP and Swing in Java
 ## Architecture 
 <p align="center"><img src="https://github.com/user-attachments/assets/a031323b-d9ae-4099-84d7-03c6ceddf557" /></p>
 
+This architecture demonstrates how each thread at server will receive message from client and will send messages to client.
 
 
 ## Dependencies
@@ -31,7 +32,7 @@ this will create folder `windows/build` where all compiled classes are
 After Compilation to Run Server use following command
 
 ```shell
-./runServer 61109 # or port you want
+./runServer MYSQL_HOSTNAME_OR_IP_ADDRESS MYSQL_UNAME MYSQL_PWD 61109 # or port you want
 ```
 
 After running server successfully try instantiating a client
@@ -48,7 +49,7 @@ Instead of dealing with those multiple scripts you can use play script which is 
 
 ```shell
 cd linux
-./play 61109 # or the port you want
+./play MYSQL_HOSTNAME_OR_IP_ADDRESS MYSQL_UNAME MYSQL_PWD 61109 # or the port you want
 ```
 This will print output something like
 ```
