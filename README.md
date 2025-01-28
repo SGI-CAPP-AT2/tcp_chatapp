@@ -38,7 +38,7 @@ After Compilation to Run Server use following command
 After running server successfully try instantiating a client
 
 ```shell
-./newClient 61109 # the port where server is listening
+./newClient 61109 SERVER_IP_ADDRESS # the port where server is listening
 ```
 Now You'll see a Window for chat app
 You can create as many clients you want
